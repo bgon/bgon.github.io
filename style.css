@@ -1,0 +1,595 @@
+/* Variable Declaration */
+:root {
+  --light-theme: rgb(229, 231, 235);
+  --dark-theme: rgb(15 23 42);
+  --light-text-color: rgb(148, 163, 184);
+  --dark-text-color: rgb(39, 52, 83);
+  --light-headings-color: rgb(226, 232, 240);
+  --dark-headings-color: rgb(15 23 42);
+  --light-nav-color: rgb(94 234 212);
+  --dark-nav-color: rgb(19 78 74);
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("InterVariable-Italic.woff2") format("woff2");
+}
+
+html {
+  line-height: 1.5;
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+body {
+  margin: 0;
+}
+
+
+/**
+ * Add this class to an image to make it fit within its fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+.g-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.u {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.u-1 {
+  width: 100%;
+  display: inline-block;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  margin-bottom:1rem;
+
+}
+
+.u-md-1-3,
+.u-md-2-3 {
+  display: inline-block;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+a, a:visited {
+  color: var(--light-nav-color);
+}
+
+
+
+/* Light/Dark Mode (default: Dark) */
+
+/* Toggle Button */
+#toggle {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--dark-text-color);
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Making a dot switch inside the Toggle Button */
+#toggle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--light-theme);
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in;
+}
+
+/* Changing toggle button background when checked */
+#toggle:checked {
+  background: var(--light-text-color);
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#toggle:checked::before {
+  background: var(--dark-theme);
+  left: 32px;
+}
+
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout {
+  background: radial-gradient(600px at 25% 290px, var(--light-theme), transparent 90%);
+  color: var(--dark-text-color);
+}
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout .menu-item a {
+  color: var(--dark-text-color);
+}
+
+#toggle:checked~#layout .nav-indicator {
+  border-bottom: 1px solid var(--dark-theme);
+}
+
+#toggle:checked~#layout section a {
+  color: var(--dark-nav-color);
+}
+
+#toggle:checked~#layout a, #toggle:checked~#layout a:visited {
+  color: var(--dark-nav-color);
+}
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout a svg {
+  color: var(--dark-text-color);
+}
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout .badge {
+
+  background-color: var(--light-text-color);
+  color: var(--dark-theme);
+}
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout .detail {
+  color: var(--dark-text-color);
+}
+
+/* Changing the background & font color when checked */
+#toggle:checked~#layout .project {
+  border: 1px solid color-mix(in srgb, var(--dark-theme), transparent 85%);
+}
+
+#toggle:checked~#layout h1,
+#toggle:checked~#layout h2,
+#toggle:checked~#layout h3 {
+  color: var(--dark-headings-color);
+}
+
+.popover__wrapper {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  z-index: -1;
+  visibility: hidden;
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+  border-radius: 9999px;
+  font-size: .75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border-right: 0;
+
+}
+
+/* Popover on toggle*/
+#toggle:hover~.popover__wrapper {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+#layout {
+  background: radial-gradient(600px at 25% 290px, rgb(22, 34, 61), var(--dark-theme));
+  color: var(--light-text-color);
+  transition: all 0.4s ease-out;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--light-headings-color);
+  margin: 0;
+}
+
+
+/* Sidebar:Header */
+
+
+.header {
+  padding:1rem;
+    }
+
+
+.header .g-img {
+  width: 50%;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 9px;
+}
+
+
+.header h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Sidebar:Navigation Menu */
+nav {
+  margin-top: 3rem;
+  display: none;
+}
+
+nav .menu-item a {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+  background-color: transparent;
+  color: var(--light-text-color);
+  text-decoration: none;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+/* Changing the width resize the .nav-indicator */
+nav .menu-item a:hover~span {
+  width: 4rem;
+}
+
+.nav-indicator {
+  float: left;
+  width: 2rem;
+  height: 1rem;
+  border-bottom: 1px solid var(--light-text-color);
+  margin-right: 0rem;
+  padding: 0px;
+  transition: all 0.3s ease-out;
+}
+
+/* Sidebar:Footer: Social Links */
+svg {
+  width: 1.5rem;
+  display: block;
+  color: var(--light-text-color);
+}
+
+.menu {
+  box-sizing: border-box;
+}
+
+.menu-list,
+.menu-item {
+  position: relative;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.menu-link,
+.menu-heading {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu-horizontal {
+  padding: 0px;
+}
+
+.menu-horizontal .menu-list {
+  display: inline-block;
+}
+
+.menu-horizontal .menu-item,
+.menu-horizontal .menu-heading,
+.menu-horizontal .menu-separator {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer ul {
+  padding: 0px;
+}
+
+
+/* Main */
+.main {
+  margin-top: 2rem;
+}
+
+/* Main:Projects */
+
+.project {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--light-theme), transparent 100%);
+  border-radius: .25rem;
+  box-sizing: border-box;
+}
+
+.project:hover {
+  border: 1px solid color-mix(in srgb, var(--light-theme), transparent 80%);
+  background: color-mix(in srgb, var(--light-theme), transparent 98%);
+  transition: all 1s;
+}
+
+.g .project {
+  margin: 0rem;
+  margin-top: 1rem;
+  padding: 0px;
+}
+
+content {
+  margin: 1rem;
+}
+
+.project .u-md-1-4 {
+  width: 23%;
+}
+
+.project .u-md-3-4 {
+  width: 75%;
+
+}
+
+.project .g-img {
+  padding: 0rem;
+  margin: 0rem;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.detail {
+  color: var(--light-text-color);
+  max-height: 0px;
+  display: none;
+  overflow: hidden;
+  padding-left: 1rem;
+}
+
+.detail .g-img {
+  max-width: 100%;
+  margin: auto;
+  z-index: 10;
+  border: 0px;
+}
+
+.clickzone {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+}
+
+.hide {
+  appearance: none;
+}
+
+.expand {
+  display: none;
+}
+
+
+.expand:checked {}
+
+.expand:checked~ {
+  cursor: default;
+}
+
+.expand:checked~.detail {
+  display: block;
+  max-height: 1500px;
+  transition: max-height 0.5s;
+}
+
+.expand:checked~.detail img {
+  cursor: zoom-in;
+}
+
+
+
+/* Content Paragraph */
+section p {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+section a {
+  color: var(--light-nav-color);
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  padding: 0;
+}
+
+.credits {
+  font-size: 75%;
+}
+
+.techstack {
+  padding: 0px;
+  margin: 0px;
+  hyphens: none;
+  white-space: nowrap;
+}
+
+.techstack a {
+  cursor: pointer;
+}
+
+.badge {
+  background-color: var(--dark-nav-color);
+  color: var(--light-nav-color);
+  border-radius: 9999px;
+  font-size: .75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: 0.25rem;
+}
+
+.url_badge {
+
+  color: var(--light-nav-color);
+  border-radius: 9999px;
+  font-size: .75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: 0.25rem;
+}
+
+/*
+ * -- MEDIA QUERIES --
+ */
+@media (min-width: 1024px) {
+
+  /* We increase the body font size */
+  body {
+    font-size: 16px;
+  }
+
+  /* Responsive g */
+  .g {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5rem;
+  }
+
+
+  .content {
+    padding: 0px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    width: 52%;
+  }
+
+  .sidebar {
+    top: 0;
+    max-height: 100vh;
+    width: 48%;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+  .footer {
+    padding: 0.5em;
+    padding-bottom: 1rem;
+  }
+
+  nav {
+    padding: 0.5em;
+    display: block;
+  }
+
+  #toggle {
+    top: 20px;
+    right: 20px;
+  }
+
+  .header {
+padding:0rem;
+  }
+
+  .header .g-img {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.pendulum {
+  width: 55px;
+  height: 45px;
+  transform: translate(0%, 0%);
+}
+
+.pendulum_box {
+  display: flex;
+  flex: 1;
+}
+
+.ball {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--light-nav-color);
+  position: relative;
+  transform-origin: 50% -300%;
+
+}
+
+
+.ball.first {
+  animation: firstball .9s alternate ease-in infinite;
+}
+
+@keyframes firstball {
+  0% {
+    transform: rotate(35deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.ball.last {
+  animation: lastball .9s alternate ease-out infinite;
+}
+
+@keyframes lastball {
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-35deg);
+  }
+}

@@ -1,115 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  
-  <title>Bertrand Gondouin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Bertrand Gondouin">
-<meta property="og:url" content="https://bgon.github.io/index.html">
-<meta property="og:site_name" content="Bertrand Gondouin">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bertrand Gondouin">
-<meta name="twitter:creator" content="@bgondouin">
-  
-    <link rel="alternate" href="/atom.xml" title="Bertrand Gondouin" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/typing.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg">
+    <title>Bertrand Gondouin - JavaScript Full Stack Developer</title>
+    <meta name="description"
+        content=" I'm Fine Art educated with 25+ years experience in the creative and IT industry: as a founder, developer, strategist, producer, organizer and lecturer.
+
+My unique blend of artistic and technical skills makes me an ideal candidate for projects requiring a fusion of creativity, innovation, and data-driven insights. With my extensive experience in prototyping,data analysis, and project development, I am confident in my ability to bring value to your organization. ">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://bgon.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bertrand Gondouin - JavaScript Full Stack Developer">
+    <meta property="og:description"
+        content=" I'm Fine Art educated with 25+ years experience in the creative and IT industry: as a founder, developer, strategist, producer, organizer and lecturer.
+
+My unique blend of artistic and technical skills makes me an ideal candidate for projects requiring a fusion of creativity, innovation, and data-driven insights. With my extensive experience in prototyping,data analysis, and project development, I am confident in my ability to bring value to your organization. ">
+    <meta property="og:image" content="https://bgon.github.io/og.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bgon.github.io">
+    <meta property="twitter:url" content="https://bgon.github.io/">
+    <meta name="twitter:title" content="Bertrand Gondouin - JavaScript Full Stack Developer">
+    <meta name="twitter:description"
+        content=" I'm Fine Art educated with 25+ years experience in the creative and IT industry: as a founder, developer, strategist, producer, organizer and lecturer.
+
+My unique blend of artistic and technical skills makes me an ideal candidate for projects requiring a fusion of creativity, innovation, and data-driven insights. With my extensive experience in prototyping,data analysis, and project development, I am confident in my ability to bring value to your organization. ">
+    <meta name="twitter:image" content="https://bgon.github.io/og.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bertrand Gondouin - JavaScript Full Stack Developer">
+    <meta property="og:url" content="https://bgon.github.io/index.html">
+    <meta property="og:site_name" content="Bertrand Gondouin - JavaScript Full Stack Developer">
+    <!-- <link rel="stylesheet" href="gs-responsive.css" />-->
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
-  
-    <body class="home-body">
-  
-      <div id="container" class="container">
-        
-<div class="home">
-  <div class="content">
-    <div class="profile">
-      <h1 class="nickname">Bertrand Gondouin</h1>
-          <ul class="links">
-      
-        <li>
-          <a href="https://www.flickr.com/photos/gondouin/collections/">Portfolio (Flickr)</a>
-        </li>
-      
-        <li>
-          <a href="https://twitter.com/bgondouin">Twitter</a>
-        </li>
-      
-        <li>
-          <a href="https://se.linkedin.com/in/gondouin">Linkedin</a>
-        </li>
-      
-        <li>
-          <a href="https://github.com/bgon">GitHub</a>
-        </li>
-      
-    </ul>
-    <hr>
-      <div class="description">
-        <p><p>I am a code enthusiast, web developer and  IoT maker. Currently exploring artistic applications of machine learning, <a href="https://github.com/jcjohnson/neural-style">neural style transfert</a> and <a href="https://github.com/phillipi/pix2pix">image-to-image translation</a>.</p>
-</p>
-      </div>
-    
-<section id="projects">
-  <h1>Current Projects</h1>
- 
-  <ul class="links">
-    
-      <li class="project-item">
-        <a href="https://vimeo.com/user59566598" title="Feedforward neural network that apply artistic styles to images. Testing its behavior with a feedback loop, thus creating a video in real-time.">Feed-forward style transfer Real-time videos (Videos)</a><br>
-      </li><br>
-    
-      <li class="project-item">
-        <a href="https://bgon.github.io/Map-Dataset-Generator" title="Create pairs of maps as training data for machine learning applications.">Map Dataset Generator (Web App)</a><br>
-      </li><br>
-    
-      <li class="project-item">
-        <a href="http://bgon.github.io/Map-Poster-Generator" title="Create your own #map #posters based on your favorite place. A #canvas &amp; Google Maps experiment.">Map Poster Generator (Web App)</a><br>
-      </li><br>
-    
-      <li class="project-item">
-        <a href="https://twitter.com/d0pp13r/status/611146891150139392" title="">ioBlocks, programmable Legos (IoT)</a><br>
-      </li><br>
-    
-      <li class="project-item">
-        <a href="http://bgon.github.io/BlocklyCraft/" title="BlocklyCraft is a plugin for Minecraft Servers which lets younger programmers to create their own Minecraft Mods. Mods are written with Blockly, a visual programming editor.">BlocklyCraft, Minecraft Plugins with visual programming</a><br>
-      </li><br>
-    
-      <li class="project-item">
-        <a href="https://www.flickr.com/photos/gondouin/collections/" title="">...more in my portfolio -&gt;</a><br>
-      </li><br>
-    
-  </ul>
-</section>
-
+<body>
+    <!-- Dark/Light mode Toggle -->
+    <input type="checkbox" id="toggle">
+    <div class="popover__wrapper">
+        Dark/Light mode
     </div>
-  </div>
-</div>
-      </div>
-      
-  <footer id="footer" class="home-footer footer">
-    <div id="copyright" class="copyright">
-      &copy; 2016 Bertrand Gondouin  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme &copy; <a href="https://github.com/geekplux" target="_blank">GeekPlux</a>
 
-      </div>
-    </footer>
+    <!-- Layout -->
+    <div id="layout" class="g">
 
-      
+        <div class="g">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar header -->
+                <div class="header">
+                    <h1>Bertrand Gondouin</h1>
+                    <h2>JavaScript Full Stack Developer</h2>
+                    no pixel is perfect
+                    <img class="g-img" src="me.jpg">
+                    <nav>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#about">About</a>
+                                <span class="nav-indicator"></span>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#projects">Current Projects</a>
+                                <span class="nav-indicator"></span>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#previous_projects">Previous Projects</a>
+                                <span class="nav-indicator"></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Sidebar footer -->
+                <div class="footer">
+                    <div class="menu menu-horizontal">
+                        <ul>
 
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+                            <li class="menu-item">
+                                <a href="emailto:gondouin@gmail.com" target="_blank" rel="noreferrer noopener"
+                                    aria-label="Email (opens in a new tab)" title="Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.294 75.294"
+                                        fill="currentColor" aria-hidden="true">
+                                        <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9
+            c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089
+            H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065
+            c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016
+            c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102
+            c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069
+            c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://bgon.github.io/" target="_blank" rel="noreferrer noopener"
+                                    aria-label="GitHub (opens in a new tab)" title="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://linkedin.com/in/gondouin" target="_blank" rel="noreferrer noopener"
+                                    aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
 
 
+                        </ul>
+                    </div>
 
-<script src="/js/typing.js"></script>
-<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+                </div>
+            </div>
+            <!-- Main content-->
+            <div class="content">
+
+                <section>
+                    <h2 id="about">About</h2>
+                    <p>
+                        I'm Fine Art educated with 25+ years experience in the creative and IT industry: as a
+                        founder,
+                        developer,
+                        strategist, producer, organizer and lecturer.
+                    </p>
+                    <p>
+                        My unique blend of artistic and technical skills makes me an ideal candidate for projects
+                        requiring
+                        a fusion of creativity, innovation, and data-driven insights. With my extensive experience
+                        in
+                        prototyping,data analysis, and project development, I am confident in my ability to bring
+                        value
+                        to
+                        your
+                        organization.
+                    </p>
+
+                </section>
+
+                <section>
+                    <h2 id="projects">Current Projects</h2>
+
+                    <div class="project  g">
+                        <input class="expand" id="p1" type="checkbox"></input>
+                        <div class="u-1 ">
+                            <h3>TrustMark.js</h3>
+                        </div>
+                        <div class="u-1 u-md-1-4">
+                            <img class="g-img" src="tm_th.svg" alt="">
+                        </div>
+
+                        <div class="u-1 u-md-3-4">
+
+                            <div class="techstack" aria-label="Technologies used">
+                                <span class="badge">PyTorch</span>
+                                <span class="badge">onnx</span>
+                                <span class="badge">TypeScript</span>
+                            </div>
+                            <p>Javascript implementation of TrustMark watermarking, as described in TrustMark -
+                                Universal Watermarking for Arbitrary Resolution Images, for encoding & decoding
+                                TrustMark watermarks locally in modern browsers as well as Node.js.
+                            </p>
+                            <div class="techstack" aria-label="links">
+                                <a href="https://huggingface.co/spaces/pdbq/trustmark.js">Demo</a>
+                                <a href="https://github.com/bgon/trustmark.js">Code</a>
+                            </div>
+                        </div>
+                        <div class="detail">
+
+                            <p>I ported the Python research paper code to Typescript.</p>
+
+                            <ol>
+                                <li>JavaScript/TypeScript
+                                    <ul>
+                                        <li>JavaScript for developing both client-side (browser) and
+                                            server-side (Node.js) applications.</li>
+                                        <li>TypeScript for type-safe coding practices.</li>
+                                    </ul>
+                                </li>
+                                <li>Machine Learning/AI
+                                    <ul>
+                                        <li>ONNX and TensorFlow.js for model handling and inference.
+                                        </li>
+                                        <li>Understanding of BCH (Bose–Chaudhuri–Hocquenghem) codes for error
+                                            correction in data encoding/decoding processes.</li>
+                                    </ul>
+                                </li>
+
+                                <li>Image Processing/Performance Optimization
+                                    <ul>
+                                        <li>Image preprocessing, resizing, and transformation techniques.</li>
+                                        <li>Optimized memory usage and performance, especially when handling
+                                            large data sets in browser and Node.js environments.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <img class="g-img" src="trustmark.png">
+                        </div>
+                        <label class="clickzone" for="p1"></label>
+                    </div>
+
+                    <div class="project g">
+                        <input class="expand" id="p2" type="checkbox"></input>
+                        <div class="u-1 ">
+                            <h3>SEAL-js</h3>
+                        </div>
+                        <div class="u-1 u-md-1-4">
+                            <img class="g-img" src="seal-js.svg" alt="">
+                        </div>
 
 
+                        <div class="u-1 u-md-3-4">
 
+                            <div class="techstack" aria-label="Technologies used">
+                                <span class="badge">Typescript</span>
+                                <span class="badge">Web.crypto</span>
+                            </div>
+                            <p>Typescript implementation of SEAL (Secure Evidence Attribution Label): an open solution
+                                for assigning attribution with authentication to media. It can be easily applied to
+                                pictures, audio files, videos, documents, and other file formats.
+                            </p>
+                            <div class="techstack" aria-label="links">
+                                <a href="https://bgon.github.io/SEAL-js">Demo</a>
+                                <a href="https://github.com/bgon/SEAL-js">Code</a>
+                            </div>
+                        </div>
+                        <div class="detail">
+
+                            <p>I created a Typescript Library from the specification.</p>
+
+                            <ol>
+                                <li>JavaScript/TypeScript
+                                    <ul>
+                                        <li>JavaScript for developing both client-side (browser) and
+                                            server-side (Node.js) applications.</li>
+                                        <li>TypeScript for type-safe coding practices.</li>
+                                    </ul>
+                                </li>
+                                <li>File Formats
+                                    <ul>
+                                        <li>Awareness of various image, audio, video, document, and container file
+                                            formats.
+                                        </li>
+                                        <li>Familiarity with how to read and parse metadata from these formats (e.g.,
+                                            JPEG, PNG, MP4, PDF).</li>
+                                    </ul>
+                                </li>
+
+                                <li>Cryptography
+                                    <ul>
+                                        <li>Knowledge of RSA, and other cryptographic algorithms and techniques.</li>
+                                        <li>Familiarity with how to compute and validate digests, including double
+                                            digest computation and hashing.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <img class="g-img" src="seal.png">
+                        </div>
+                        <label class="clickzone" for="p2"></label>
+                    </div>
+
+                </section>
+                <section>
+                    <h2 id="previous_projects">Previous Projects</h2>
+                    <p>
+                        Please visit my Flickr <a
+                            href="https://www.flickr.com/photos/gondouin/collections/">Portfolio</a>:
+
+                    <ul>
+                        <li><a href="https://www.flickr.com/photos/gondouin/collections/72157670787191590/">Educational
+                                technology</a></li>
+                        <li><a href="https://www.flickr.com/photos/gondouin/collections/72157671803465816/">Mobile
+                                Apps</a></li>
+                        <li><a href="https://www.flickr.com/photos/gondouin/collections/72157671015675362/">Image
+                                Processing, Machine Learning</a></li>
+                        <li><a
+                                href="https://www.flickr.com/photos/gondouin/collections/72157635985896906/">Upcycling</a>
+                        </li>
+                        <li><a href="https://www.flickr.com/photos/gondouin/collections/72157635945844093/">Physical
+                                Interaction Design and IoT </a></li>
+                        <li><a href="https://www.flickr.com/photos/gondouin/collections/72157635986209014/">Show
+                                Production </a></li>
+                    </ul>
+                    </p>
+
+                </section>
+
+                <div class="credits">
+                    <p>Designed and coded in <a href="https://vscodium.com/" target="_blank" rel="noreferrer noopener"
+                            aria-label="VSCodium (opens in a new tab)">VSCodium</a>.
+                        Built with <a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="HTML5, markup language used for structuring and presenting hypertext documents on the World Wide Web (opens in a new tab)">Hypertext
+                            Markup Language</a> and <a href="https://www.w3.org/Style/CSS/" target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="CSS, style sheet language used for specifying the presentation and styling of a document written in a markup language (opens in a new tab)">Cascading
+                            Style Sheets</a> No Javascript, because irony. Deployed with <a href="https://git-scm.com/"
+                            target="_blank" rel="noreferrer noopener"
+                            aria-label="Git, free and open source distributed version control system (opens in a new tab)">Git</a>.
+                        <a href="https://rsms.me/inter/" target="_blank" rel="noreferrer noopener"
+                            aria-label="Inter typeface (opens in a new tab)">Inter typeface</a> by <a
+                            href="https://rsms.me" target="_blank" rel="noreferrer noopener"
+                            aria-label="Rasmus Andersson (opens in a new tab)">Rasmus Andersson</a>
+                    </p>
+                    <div class="pendulum">
+                        <div class="pendulum_box">
+                            <div class="ball first"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball last"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
